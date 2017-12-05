@@ -1,0 +1,24 @@
+
+    <mat-toolbar color="primary" style="display:flex" class="app-navbar mat-elevation-z6">
+        <mat-toolbar-row>
+            <span class="menu_text" *ngIf="hostSiteUrl.length > 0">
+                <a mat-icon-button href="{{hostSiteUrl}}">
+                    <i class="material-icons">arrow_back</i>
+                </a>
+            </span>
+            <span class="menu_text" [routerLink]="['/main']">
+                {{applicationTitle}}
+            </span>
+        
+            <!-- This fills the remaining space of the current row -->
+            <span class="fill-remaining-space">
+
+            </span>
+        
+            <span>
+                <button mat-icon-button (click)="menuClicked()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </span>
+        </mat-toolbar-row>
+    </mat-toolbar>
