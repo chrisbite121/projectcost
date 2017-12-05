@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 
 //config objects
-import { AppConfig } from '../config/app.config'
-const { appDetails } = AppConfig;
+import { ConfigService } from './config.service'
 
 export class SettingService {
     private _appTitle: string;
-    constructor(){
-        this._appTitle = appDetails.appTitle;
+    constructor(private config : ConfigService){
+        this._appTitle = config.AppConfig.appTitle;
         console.log(this.appTitle)
     }
 

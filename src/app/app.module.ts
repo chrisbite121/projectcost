@@ -13,6 +13,7 @@ import { MainModule } from './main/main.module'
 import { SettingModule } from './setting/setting.module'
 
 //services
+import { ConfigService } from './service/config.service';
 import { UrlService} from './service/url.service';
 import { LogService } from './service/log.service';
 import { SettingService } from './service/settings.service';
@@ -40,6 +41,7 @@ import { appRoutes } from './routes'
     SettingModule
   ],
   providers: [
+    ConfigService,
     UrlService,
     LogService,
     SettingService,
